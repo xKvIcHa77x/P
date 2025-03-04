@@ -98,9 +98,6 @@ def save_m3u8(organized_channels, site_name):
                         # Costruisci l'URL proxy
                         url = f"http://217.154.5.184:80/?url={url_https}"
                         f.write(f'#EXTINF:-1 tvg-id="" tvg-name="{name}" group-title="{category}" http-user-agent="{user_agent}" http-referrer="{base_url}",{name}\n')
-                        f.write(f"#EXTVLCOPT:http-user-agent={user_agent}\n")
-                        f.write(f"#EXTVLCOPT:http-referrer={base_url}\n")
-                        f.write(f'#EXTHTTP:{{"User-Agent":"{user_agent}","Referer":"{base_url}"}}\n')
                         f.write(f"{url}\n\n")
 
     print(f"File {output_file} creato con successo!")
